@@ -379,35 +379,45 @@ margin-bottom: 10%;
 {   margin-top: 5%;
     position: absolute;
     margin-left: 100%;
-    width: 60%;
+    width: 50%;
     opacity: 0;
     transition: 1s;
+    transform: scale(2);
+    
     
 }
 
 #mp31
 {position: absolute;
-    width: 50%;
  
+    width: 50%;
+    margin-left: 25%;
+ opacity: 0.8;
  
 }
 
 #mp32
 {   position: absolute;
-    margin-left: 50%;
-    width: 50%;
+    opacity: 0.8;
+        width: 50%;
+    margin-top: 32px;
+    margin-left: 25%;
+    
 }
 
 #mp33
 {width: 50%;
- margin-top: 130;
+ margin-top: 64px;
  position: absolute;
+ margin-left: 25%;
+ opacity: 0.8;
 }
 
 
 #mp34
 {   position: absolute;
-    margin-top: 130;
-    margin-left: 50%;
+    margin-top: 96px;
+    margin-left: 25%;
     width: 50%;
+    opacity: 0.8;
 }

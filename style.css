@@ -5,6 +5,11 @@ body
 
 }
 
+@font-face {
+    font-family: a_avanteBs; /* Имя шрифта */
+    src: url(fonts/AVA.ttf); /* Путь к файлу со шрифтом */
+   }
+
 ::-webkit-scrollbar {
     width: 0.5%;
 }

@@ -9,7 +9,10 @@ body
     font-family: a_avanteBs; /* Имя шрифта */
     src: url(fonts/AVA.ttf); /* Путь к файлу со шрифтом */
    }
-
+html{
+	font-family: a_avanteBs;
+	
+}
 ::-webkit-scrollbar {
     width: 0.5%;
 }

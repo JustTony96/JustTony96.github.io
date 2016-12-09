@@ -1,0 +1,332 @@
+<html>
+
+<link rel=stylesheet href=style.css />
+<head>
+<meta charset="windows-1251">
+<title>БАЙДЁНОК</title>
+</head>
+<body onload=test()>
+
+
+
+
+<script language=javascript>
+
+//
+    var isup = false;
+    var activeWindownumber = 0;
+
+    function tablemove() {
+        if (isup == false) {
+            var t = document.getElementById("introtable");
+            t.style.transform = "scale(0.5)";
+            t.style.marginTop = "-5%";
+            t.style.paddingTop = "4%";
+//            document.getElementById("bottompanel").style.left = "60%";
+//            document.getElementById("bottompanel").style.fontSize = 40;
+            isup = true;
+        }
+
+    }
+
+    function firstenable() {
+        //меню
+        test();
+
+        document.getElementById("photoscommon").style.display = "block";
+       //alert(window.getComputedStyle(document.getElementById("photoscommon")).opacity);
+        
+        document.getElementById("td1").style.color = "#DDDDDD";
+        document.getElementById("td2").style.color = "#999999";
+        document.getElementById("td3").style.color = "#999999";
+        document.getElementById("td1").style.textShadow = "0 0 30px #DDDDDD";
+        activeWindownumber = 1;
+        //сдвиг блоков
+        setTimeout(function () {
+            document.getElementById("photoscommon").style.right = "0%";
+            document.getElementById("photoscommon").style.opacity = "1";
+        }, 1);
+        test();
+
+     }
+
+     function firstdisable() {
+         test();
+         
+        document.getElementById("photoscommon").style.opacity = "0";
+        document.getElementById("td1").style.textShadow = "0 0 0px #DDDDDD";
+       
+        document.getElementById("photoscommon").style.right = "120%";
+        setTimeout(function () {
+            document.getElementById("photoscommon").style.display = "none";
+        }, 1000);
+        test();
+    }
+
+    function secondenable() {
+        //document.getElementById("videoscommon").style.display = "block";
+        document.getElementById("td2").style.color = "#DDDDDD";
+        document.getElementById("td1").style.color = "#999999";
+        document.getElementById("td3").style.color = "#999999";
+        document.getElementById("td2").style.textShadow = "0 0 30px #DDDDDD";
+        activeWindownumber = 2;
+
+
+        document.getElementById("videoscommon").style.display = "block";
+        setTimeout(function () {
+            document.getElementById("videoscommon").style.opacity = "1";
+            document.getElementById("videoscommon").style.marginTop = "0%";
+        }, 1);
+        
+    }
+
+    function seconddisable() {
+        //document.getElementById("videoscommon").style.display = "none";
+        document.getElementById("td2").style.textShadow = "0 0 0px #DDDDDD";
+
+        document.getElementById("videoscommon").style.opacity = "0";
+        document.getElementById("videoscommon").style.marginTop = "100%";
+        setTimeout(function () {
+            
+            document.getElementById("videoscommon").style.display = "none";
+        }, 1000);
+
+    }
+
+    function thirdenable() {
+        
+        document.getElementById("td3").style.color = "#DDDDDD";
+        document.getElementById("td1").style.color = "#999999";
+        document.getElementById("td2").style.color = "#999999";
+        document.getElementById("td3").style.textShadow = "0 0 30px #DDDDDD";
+        activeWindownumber = 3;
+
+        document.getElementById("audioscommon").style.display = "block";
+        //alert(window.getComputedStyle(document.getElementById("audioscommon")).opacity);
+        setTimeout(function () {
+            document.getElementById("audioscommon").style.marginLeft = "20%";
+            document.getElementById("audioscommon").style.opacity = "0.8";
+        }, 1);
+    }
+
+    function thirddisable() {
+        
+        document.getElementById("td3").style.textShadow = "0 0 0px #DDDDDD";
+
+
+        document.getElementById("audioscommon").style.opacity = "0";
+        document.getElementById("audioscommon").style.marginLeft = "100%";
+        setTimeout(function () {
+
+            document.getElementById("audioscommon").style.display = "none";
+        }, 1000);
+
+    }
+
+
+
+
+    function table1() {
+        tablemove();
+        
+        seconddisable();
+        thirddisable();
+
+        firstenable();
+            }
+    function table2() {
+        tablemove();
+        firstdisable();
+        thirddisable();
+
+        secondenable();
+        
+        
+        
+            }
+    function table3() {
+        tablemove();
+        
+        firstdisable();
+        seconddisable();
+        thirdenable();
+            }
+
+function home() {
+    document.getElementById("td1").style.color = "#DDDDDD";
+    document.getElementById("td2").style.color = "#DDDDDD";
+    document.getElementById("td3").style.color = "#DDDDDD";
+
+    document.getElementById("photoscommon").style.opacity = "0";
+
+    document.getElementById("videoscommon").style.marginTop = "100%";
+    document.getElementById("videoscommon").style.opacity = "0";
+
+    document.getElementById("audioscommon").style.opacity = "0";
+    document.getElementById("audioscommon").style.marginLeft = "100%";
+
+    setTimeout(function () {
+        document.getElementById("videoscommon").style.display = "none";
+    }, 1000);
+    setTimeout(function () {
+        document.getElementById("photoscommon").style.display = "none";
+    }, 1000);
+
+    setTimeout(function () {
+        document.getElementById("audioscommon").style.display = "none";
+    }, 1000);
+
+    document.getElementById("introtable").style.marginTop = "17%";
+    document.getElementById("introtable").style.transform = "scale(1)";
+    document.getElementById("introtable").style.paddingTop = "0%";
+    isup = false;
+
+    document.getElementById("td1").style.textShadow = "0 0 0px #DDDDDD";
+    document.getElementById("td2").style.textShadow = "0 0 0px #DDDDDD";
+    document.getElementById("td3").style.textShadow = "0 0 0px #DDDDDD";
+
+    
+
+    activeWindownumber = 0;
+}
+
+var isbpanelup;
+isbpanelup = 0;
+function bpanel() {
+    
+    if (isbpanelup == 0) {
+        document.getElementById("bottompanel").style.top = "80%";
+        document.getElementById("bottompanel2").style.top = "84%";
+        document.getElementById("bottompanelVK").style.top = "80%";
+        document.getElementById("bottompanelInsta").style.top = "81%";
+        document.getElementById("bottompanelVK").style.opacity = 1;
+        document.getElementById("bottompanelInsta").style.opacity = 1;
+
+        isbpanelup = 1;
+        return;
+        }
+
+    if (isbpanelup == 1) {
+        document.getElementById("bottompanel").style.top = "94%";
+        document.getElementById("bottompanel2").style.top = "98%";
+        document.getElementById("bottompanelVK").style.top = "94%";
+        document.getElementById("bottompanelInsta").style.top = "95%";
+        document.getElementById("bottompanelVK").style.opacity = 0;
+        document.getElementById("bottompanelInsta").style.opacity = 0;
+        isbpanelup=0;
+    }
+
+}
+
+function test() {
+    
+        element = document.getElementById('photoscommon');
+        data = window.getComputedStyle(element).opacity;
+        document.getElementById("test").innerHTML += data;
+        data = window.getComputedStyle(element).display;
+        document.getElementById("test").innerHTML += data;
+
+
+
+
+}
+
+
+
+</script>
+
+<div id=home onclick=home()>Д</div>
+
+
+
+
+<table id=introtable align=center >
+<td id=td1 align=center onclick=table1()>ФОТО</td>
+<td class=divider align=center>|</td>
+<td id=td2 align=center onclick=table2()>ВИДЕО</td>
+<td class=divider align=center>|</td>
+<td id=td3 align=center onclick=table3()>АУДИО</td>
+</table>
+
+
+<div id=photoscommon>
+
+<div id=photos1>
+
+<div id=ph1>
+<img src=https://pp.vk.me/c626417/v626417416/22821/3G0CI0_O6_Q.jpg width=100% />
+</div>
+<div id=ph2>
+<img src=https://pp.vk.me/c626417/v626417416/2280d/mPWDC_nfIm0.jpg width=100% />
+</div>
+<div id=ph3>
+<img src=https://pp.vk.me/c626417/v626417416/22781/izmh_iM-WYo.jpg width=100% />
+</div>
+</div>
+
+<div id=photos2>
+
+<div id=ph4>
+<img src=https://pp.vk.me/c629402/v629402416/50ace/0n8ipst-_CM.jpg width=100% />
+</div>
+<div id=ph5>
+<img src=https://pp.vk.me/c636131/v636131416/6001/hJNtF_o4-d0.jpg width=100% />
+</div>
+
+</div>
+
+</div>
+
+<div id=bottompanel align=center onclick=bpanel()>КОНТАКТЫ</div>
+<div id=bottompanel2 >8029 172 45 62</div>
+
+<div id=bottompanelVK><a href="https://vk.com/exonex" target="_blank" > <img src=bottomPanelVK.png /></a> </div>
+<div id=bottompanelInsta><a href="https://instagram.com/batonyrobson" target="_blank"><img src=bottomPanelInsta.png /></a></div>
+
+<div id=videoscommon>
+
+<div id=vid1>
+<iframe  width="100%" height="100%" src="https://www.youtube.com/embed/B8UTHXdGuuo?showinfo=0&controls=0" frameborder="0" allowfullscreen ></iframe>
+</div>
+
+<div id=vid2>
+<iframe  width="100%" height="100%" src="https://www.youtube.com/embed/oxbzE7HZOoY?showinfo=0&controls=0" frameborder="0" allowfullscreen ></iframe>
+</div>
+
+<div id=vid3>
+<iframe  width="100%" height="100%" src="https://www.youtube.com/embed/huH9buk65Hg?showinfo=0&controls=0" frameborder="0" allowfullscreen ></iframe>
+</div>
+<div id=vid4>
+<iframe  width="100%" height="100%" src="https://www.youtube.com/embed/7RQFX-fljpA?showinfo=0&controls=0" frameborder="0" allowfullscreen ></iframe>
+</div>
+</div>
+
+
+<div id=audioscommon>
+
+<div id=mp31>
+<iframe width="100%" height="130" frameborder="no" scrolling="no"  src="http://mpsound.ru/embed.php?id=1010"></iframe>
+</div>
+
+<div id=mp32>
+<iframe width="100%" height="130" frameborder="no" scrolling="no" src="http://mpsound.ru/embed.php?id=1011"></iframe>
+</div>
+
+<div id=mp33>
+<iframe width="100%" height="130" frameborder="no" scrolling="no" src="http://mpsound.ru/embed.php?id=1012"></iframe>
+</div>
+
+<div id=mp34>
+<iframe width="100%" height="130" frameborder="no" scrolling="no" src="http://mpsound.ru/embed.php?id=1013"></iframe>
+</div>
+
+</div>
+
+
+
+
+<div id=test></div>
+
+</body>
+
+</html>

@@ -6,11 +6,11 @@ body
 }
 
 @font-face {
-    font-family: a_avanteBs; /* Имя шрифта */
+    font-family: 'a_avanteBs'; /* Имя шрифта */
     src: url(fonts/AVA.ttf); /* Путь к файлу со шрифтом */
    }
 html{
-	font-family: a_avanteBs;
+	font-family: 'a_avanteBs';
 	
 }
 ::-webkit-scrollbar {
@@ -99,8 +99,8 @@ html
 
  
  #td1, #td2, #td3
- {font-family: a_avanteBs;
-  src: url(fonts/AVA.ttf);
+ {
+  
   font-size: 80;
   
  }
@@ -120,7 +120,7 @@ html
  }
  
  .divider
- {font-family: a_avanteBs;
+ {
   src: url(fonts/AVA.ttf);
   font-weight: bold;
   font-size: 40;
